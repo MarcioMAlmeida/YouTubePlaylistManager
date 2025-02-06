@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "473619908504",
+    "project_id": "playlistmanager-b3d2e",
+    "storage_bucket": "playlistmanager-b3d2e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473619908504:android:0eaf25902b956a7b050ded",
+        "android_client_info": {
+          "package_name": "com.example.youtubeplaylistmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473619908504-8fff8pnfo5tav03okqiqg2edrks77ege.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.youtubeplaylistmanager",
+            "certificate_hash": "923769eff3b0fbc0bdc51698f08f8843faf90137"
+          }
+        },
+        {
+          "client_id": "473619908504-6j4kgbe5k3d5g64fumq1c4a2ahgv93jj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhUzN97nre8QHNbAXO6Vjb1xL0Lq2-sz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473619908504-6j4kgbe5k3d5g64fumq1c4a2ahgv93jj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
