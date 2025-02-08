@@ -22,3 +22,30 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Arquivos do Android Studio
+.idea/
+.gradle/
+build/
+*.iml
+*.keystore
+local.properties
+
+# Firebase
+google-services.json
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Arquivos gerados pelo sistema
+.DS_Store
+Thumbs.db
+
+# Dependências
+**/libs/
+**/node_modules/
+
+# Arquivos de configuração pessoal
+*.env
+*.env.local
