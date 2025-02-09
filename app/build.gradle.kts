@@ -92,4 +92,9 @@ dependencies {
     ksp(libs.room.compiler)
 
     implementation(libs.androidx.credentials)
+
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.coil.compose)
 }

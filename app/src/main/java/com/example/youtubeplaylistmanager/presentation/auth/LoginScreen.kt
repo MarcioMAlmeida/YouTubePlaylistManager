@@ -28,7 +28,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 @Composable
 fun LoginScreen(
     viewModel: AuthViewModel = hiltViewModel(),
-    onSuccess: () -> Unit
+    onLoginSuccess: () -> Unit
 ) {
     val errorMessage by viewModel.errorMessage.collectAsState()
     val context = LocalContext.current
@@ -48,7 +48,7 @@ fun LoginScreen(
 
 
     LaunchedEffect(isSignedIn) {
-        if (isSignedIn) onSuccess()
+        if (isSignedIn) onLoginSuccess()
     }
 
     Column(

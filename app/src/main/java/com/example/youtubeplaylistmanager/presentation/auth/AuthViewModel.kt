@@ -2,6 +2,7 @@ package com.example.youtubeplaylistmanager.presentation.auth
 
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,6 +15,7 @@ class AuthViewModel @Inject constructor(
 ) : ViewModel() {
     private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage
+    val currentUser = MutableStateFlow<FirebaseUser?>(auth.currentUser)
 
     private val _isSignedIn = MutableStateFlow(false)
     val isSignedIn: StateFlow<Boolean> = _isSignedIn
@@ -23,11 +25,18 @@ class AuthViewModel @Inject constructor(
         auth.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 _isSignedIn.value = task.isSuccessful
+                currentUser.value = task.result?.user
             }
         auth.signInWithCredential(credential)
         .addOnFailureListener { e ->
             _errorMessage.value = e.localizedMessage
         }
     }
+
+    fun signOut() {
+        auth.signOut()
+        currentUser.value = null
+    }
+
 }
 
